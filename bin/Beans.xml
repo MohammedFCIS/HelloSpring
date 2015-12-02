@@ -4,8 +4,9 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-   <bean id="helloSpring" class="com.tutorialspoint.HelloSpring">
-       <property name="message" value="Hello Spring!"/>
+   <bean id="helloSpring" class="com.tutorialspoint.HelloSpring"
+   init-method="init" destroy-method="destroy">
+       <property name="message" value="Hello Spring!"/> 
    </bean>
 
 </beans>
