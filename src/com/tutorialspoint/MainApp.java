@@ -6,12 +6,17 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
    public static void main(String[] args) {
-	   AbstractApplicationContext context = 
+	   ApplicationContext context = 
              new ClassPathXmlApplicationContext("Beans.xml");
 
       HelloSpring obj = (HelloSpring) context.getBean("helloSpring");
 
-      obj.getMessage();
-      context.registerShutdownHook();
+      obj.getMessage1();
+      obj.getMessage2();
+      
+      HelloIndia objB = (HelloIndia) context.getBean("helloIndia");
+      objB.getMessage1();
+      objB.getMessage2();
+      objB.getMessage3();
    }
 }
