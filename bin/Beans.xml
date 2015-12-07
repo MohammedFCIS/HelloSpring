@@ -15,5 +15,12 @@
 		<property name="message1" value="Hello India!" />
 		<property name="message3" value="Namaste India!" />
 	</bean>
+	<bean id="textEditor" class="com.tutorialspoint.TextEditor">
+      <constructor-arg ref="spellChecker"/>
+   </bean>
+
+   <!-- Definition for spellChecker bean -->
+   <bean id="spellChecker" class="com.tutorialspoint.SpellChecker">
+   </bean>
 
 </beans>

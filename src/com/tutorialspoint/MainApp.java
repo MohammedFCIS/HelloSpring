@@ -6,10 +6,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MainApp {
    public static void main(String[] args) {
-	   ApplicationContext context = 
+	  ApplicationContext context = 
              new ClassPathXmlApplicationContext("Beans.xml");
 
-      HelloSpring obj = (HelloSpring) context.getBean("helloSpring");
+	  /* HelloSpring obj = (HelloSpring) context.getBean("helloSpring");
 
       obj.getMessage1();
       obj.getMessage2();
@@ -17,6 +17,10 @@ public class MainApp {
       HelloIndia objB = (HelloIndia) context.getBean("helloIndia");
       objB.getMessage1();
       objB.getMessage2();
-      objB.getMessage3();
+      objB.getMessage3();*/
+
+       TextEditor te = (TextEditor) context.getBean("textEditor");
+
+       te.spellCheck();
    }
 }
